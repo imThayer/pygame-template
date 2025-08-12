@@ -1,9 +1,15 @@
 import pygame
-from colors import *
+from assets.colors import *
 
 # AMONG US MAKER
 def draw_amongus(window:pygame.display, color:tuple, x: int, y : int, scale=1, flip= False):
-    """haha draw amongus hahahahahahhhahaha"""
+    """haha draw amongus hahahahahahhhahaha
+    window: pygame display
+    color: tuple (r,g,b) value
+    x: x-coordinate value
+    y: y-coordinate value
+    scale: default = 1,
+    flip: False = Right, True = Left"""
     if flip: # FLIPPED TRUE: AMONG US FACING LEFT
         amogus_body = Ellipse(window,color, x * scale, y * scale,300 *scale,400 * scale)
         amogus_legs1 = Rectangle(window, color, (x+ 50)* scale, (y+ 300)* scale,50* scale,150* scale)

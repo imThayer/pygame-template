@@ -2,14 +2,14 @@
 
 #font = pygame.font.Font("C:\\Windows/Users/YangTh599/Documents/GitHub/pygame-template/fonts/MoreSugar-Regular.ttf") # MORESUGAR Font
 
-from colors import *
+import assets.colors as clrs
 import pygame
 from os.path import join
 pygame.init()
 
 class Text_box():
 
-    def __init__(self, window, x, y, width, height, text, text_color = WHITE,rect_color = THAYER_GREEN,font="Comic Sans MS",text_size = 24, draw_rect = True, centered = True, rotation = 0):
+    def __init__(self, window, x, y, width, height, text, text_color = clrs.WHITE,rect_color = clrs.THAYER_GREEN,font="Comic Sans MS",text_size = 24, draw_rect = True, centered = True, rotation = 0):
         self.rect = pygame.Rect(x,y,width,height) # TEXTBOX BOX
         self.window = window
 
@@ -127,7 +127,7 @@ class Image_box():
 
 class Button(Text_box):
 
-    def __init__(self, window, x, y, width, height, text, text_color = WHITE,rect_color = THAYER_GREEN, hover_color = LIME,font="Comic Sans MS",text_size = 24, draw_rect = True, centered = True, rotation = 0):
+    def __init__(self, window, x, y, width, height, text, text_color = clrs.WHITE,rect_color = clrs.THAYER_GREEN, hover_color = clrs.LIME,font="Comic Sans MS",text_size = 24, draw_rect = True, centered = True, rotation = 0):
         super().__init__(window, x, y, width, height, text, text_color,rect_color,font,text_size, draw_rect, centered, rotation)
 
         self.hover_color = hover_color

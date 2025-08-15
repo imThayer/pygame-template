@@ -28,7 +28,7 @@ def init_game():
 def draw(window):
     """DRAW FUNCTION | allows screen graphics to be added"""
     #BACKGROUND
-    window.fill(clrs.WHITE) # 15
+    window.fill(clrs.WHITE) # DEFAULT = clrs.WHITE (255,255,255)
     
 
     #FOREGROUND
